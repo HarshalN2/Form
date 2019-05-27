@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Visitor's Pass</title>
+    <link rel="stylesheet" href="visitor.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  </head>
+  <body>
+    <div class="row">
+      <div class="col m1 l2"></div>
+      <div class="col s12 m10 l8">
+        <div class="card">
+            <div class="card-content">
+                <h3 class="light center card_header">OFAJ</h3>
+                <h5 class="light center">Visitor's Pass</h5>
+
+                <div class="row">
+                    <form action="#" method="post">
+                        <div class="input-field col s12 m12 l6">
+                            <input type="text" name="full_name" id="fname" required>
+                            <label for="fname">Full Name</label>
+                        </div>
+                        <div class="input-field col s12 m12 l6">
+                            <input type="text" name="Organisation_name" id="oname" required>
+                            <label for="oname">Organisation name</label>
+                        </div>
+                        <div class="input-field col s12 m12 l6">
+                            <input type="text" name="officer_name" id="off_name" required>
+                            <label for="off_name">Officer Name</label>
+                        </div>
+                        <div class="input-field col s12 m12 l6">
+                            <input type="tel" name="u_email" id="u_pho" required>
+                            <label for="u_pho">Contact No.</label>
+                        </div>
+                        <div class="input-field col s12 m12 l6">
+                            <input type="text" name="User_add" id="o_add" required>
+                            <label for="o_add">Official Address</label>
+                        </div>
+                        <div class="col s12 m12 l6 input-field">
+                            <input type="date" name="in_date" id="i_date" required>
+                            <!--<label for="i_date">Date</label>-->
+                        </div>
+                        <div class="col s12 m12 l6 input-field">
+                            <input type="time" name="in_time" id="i_time" required>
+                            <label for="i_time">In Time</label>
+                        </div>
+                        <div class="col s12 m12 l6 input-field">
+                            <input type="time" name="out_time" id="o_time" required>
+                            <label for="o_time">Out Time</label>
+                        </div>
+                        <div class="col s12 m12 l12 center btn_ctn">
+                            <button type="submit" class="btn center sub_btn blue">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="col m1 l2"></div>
+    </div>
+
+
+
+
+
+    <!--  Scripts-->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("search_par");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("names_col");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("span")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+
+             $('.carousel').carousel();
+                setInterval(function () {
+                    $('.carousel').carousel('next');
+                }, 3000);
+
+            // Or with jQuery
+
+            $(document).ready(function () {
+                $('.sidenav').sidenav();
+            });
+
+
+            let vh = window.innerHeight * 0.01;
+                // Then we set the value in the --vh custom property to the root of the document
+                document.documentElement.style.setProperty('--vh', `${vh}px`);3
+
+
+
+
+            $(document).ready(function () {
+                $('.collapsible').collapsible();
+            });
+
+            $(document).ready(function () {
+                $('.parallax').parallax();
+            });
+          var instance = M.Carousel.init({
+                fullWidth: true,
+                indicators: true
+            });
+
+
+            document.addEventListener('DOMContentLoaded', function () {
+                    var elems = document.querySelectorAll('.modal');
+                    var instances = M.Modal.init(elems, options);
+                });
+
+                // Or with jQuery
+
+                $(document).ready(function () {
+                    $('.modal').modal();
+                });
+    </script>
+  </body>
+</html>
